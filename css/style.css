@@ -1,0 +1,324 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* HTML Layout */
+
+html,
+body,
+.container,
+.hero-banner,
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+html,
+body,
+ul,
+.hero-banner .article-info,
+.hero-banner h2,
+.hero-banner p {
+    padding: 0;
+}
+
+.container,
+.hero-banner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer,
+.head-banner,
+.hero-banner,
+.logo-title,
+ul,
+.more-option,
+nav ul li a {
+    display: flex;
+}
+
+html, 
+body {
+    color: #151515;
+    background-color: #FAFAFA;
+} 
+
+footer,
+.more-option {
+    justify-content: center;
+}
+
+footer, 
+.hero-banner {
+    flex-direction: column;
+}
+
+footer,
+.head-banner,
+.logo-title,
+.more-option,
+nav ul,
+nav ul li a {
+    align-items: center;
+}
+
+footer {
+    background: #202020;
+    height: 6.5625rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding-top: 1.5em;
+}
+
+.post,
+ul {
+    gap: 1em;
+}
+
+/* Header Section */
+
+.head-banner,
+.logo-title {
+    flex-direction: row;
+}
+
+.head-banner {
+    padding: 1.25rem;
+    justify-content: space-between;
+}
+
+.img-logo {
+    padding-right: 1em;
+    object-fit: contain;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav a {
+    color: #090909;
+    display: block;
+    padding: 0.85em 0;
+    font-size: 0.75em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a,
+.section-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover, 
+nav a:active {
+    color: #b3b3b3;
+}
+
+nav ul {
+    gap: 1.25rem; 
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a i {
+    margin-left: 0.313rem;
+}
+
+/* Hero Section(Main) */
+
+.hero-banner {
+    background-image: url("/images/blog-one-cover.jpg");
+    background-color: black;
+    background-position: 0 70%;
+    background-repeat: no-repeat;
+    width: 25.875em;
+    width: 100vw;
+    background-size: cover;
+    max-height: 18.313rem; 
+    height: 100vh;
+    justify-content: flex-end;
+}
+
+.hero-banner .article-info,
+.hero-banner h2,
+.hero-banner p {
+    color: white;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    text-shadow: 0.063rem 0.063rem #000000;
+}
+
+.hero-banner p {
+    padding-bottom: 1rem;
+}
+
+/* typography */
+
+html,
+body,
+footer,
+nav a,
+.more-option a {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+h1 {
+    font-size: 0.875em;
+    font-family: "Roboto", sans-serif;
+}
+
+footer h3,
+footer h4 {
+    font-size: 0.75rem;
+}
+
+footer h3,
+.more-option a {
+    font-weight: 700;
+}
+
+footer h3 {
+    color: #ECECEC;
+}
+
+footer h4 {
+    color: #D7D7D7;
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.3;
+}
+
+/* articles-section */
+
+.post {
+    display: grid;            
+    grid-template-columns: repeat(1, 1fr);                   
+}
+
+article,
+.article-img {
+    margin-bottom: 1em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    max-width: 100%; 
+    max-height: 14.688rem; 
+}
+
+.article-info {
+    text-transform: uppercase;
+}
+
+.article-img {
+    border-radius: 0.1875rem;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    margin: 0.5em 0 0.35em 0;
+}
+
+.article-preview {
+    margin-top: 0;
+}
+
+.darker {
+    transition: all 0.2s ease-in-out;
+}
+
+.darker:hover,
+.darker:active {
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+.more-option {
+    padding: 1.688rem;
+}
+
+.more-option a {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.more-option a:hover {
+    color: #b3b3b3;
+}
+
+footer {
+    text-align: center; 
+}
+
+footer div {
+    display: flex; 
+    justify-content: center;
+    gap: 1.25rem; 
+}
+
+footer a {
+    color: #fff; 
+    transition: color 0.3s ease; 
+}
+
+footer a:hover {
+    color: #626262; 
+}
+
+/* MEDIA QUERIES */
+
+
+@media (min-width: 480px) {
+    .post {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .img-logo {
+        width: 2em; 
+        height: 2em;
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .post {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .hero-banner, 
+    .head-banner,
+    .container {
+        max-width: 67.8125rem;
+        width: 100%;
+    } 
+
+    h1 {
+        font-size: 1.25em;
+
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    .img-logo {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+}
+
